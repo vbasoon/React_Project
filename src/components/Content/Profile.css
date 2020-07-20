@@ -1,0 +1,15 @@
+.main {
+   grid-area: content;
+   background-color: #dac96e;
+   color: black;
+   /* width: 70%;
+   height: 92vh;
+   float: left; */
+ }
+ 
+ .content {
+   display: block;
+   width: 100%;
+   color: black;
+ }
+ 

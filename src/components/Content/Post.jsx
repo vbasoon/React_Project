@@ -7,7 +7,7 @@ const Post = (props) => {
             <div className="content">
 
                <div>
-                  <img src="./public/cat.png" alt="empty" />   Avatar + description
+                  <img src="./../cat.png" alt="empty" />   Avatar + description
               </div>
 
             </div>
@@ -16,4 +16,4 @@ const Post = (props) => {
    )
 }
 
-export default Footer
+export default Post

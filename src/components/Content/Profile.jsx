@@ -1,4 +1,6 @@
 import React from 'react';
+import Post from './Post';
+import './Profile.css'
 
 const Profile = () => {
    return (
@@ -7,8 +9,8 @@ const Profile = () => {
             <div className="content">
                <img src="https://it-black.ru/wp-content/uploads/2019/04/nasledovanie_css.png" alt="empty" />
                <div>
-                  Avatar + description
-              </div>
+                  <Post />
+               </div>
                <div>
                   My Post
               </div>
