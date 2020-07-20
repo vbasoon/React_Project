@@ -14,7 +14,7 @@ const Profile = () => {
                <div>
                   My Post
               </div>
-               <div>
+               <div className="active">
                   My Post
               </div>
                <div>
