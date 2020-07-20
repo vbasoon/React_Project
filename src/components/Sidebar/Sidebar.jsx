@@ -5,13 +5,13 @@ const Sidebar = () => {
       <aside className="sidebar">Sidebar
          <nav>
             <div className="container">
-               <ul>
-                  <li><a href="">Profile</a></li>
-                  <li><a href="">Message</a></li>
-                  <li><a href="">News</a></li>
-                  <li><a href="">Music</a></li>
+               <ul className="nav-menu">
+                  <li className="item-menu"><a href="">Profile</a></li>
+                  <li className="item-menu"><a href="">Message</a></li>
+                  <li className="item-menu"><a href="">News</a></li>
+                  <li className="item-menu"><a href="">Music</a></li>
                   <hr />
-                  <li><a href="">Settings</a></li>
+                  <li className="item-menu"><a href="">Settings</a></li>
                </ul>
             </div>
          </nav>
