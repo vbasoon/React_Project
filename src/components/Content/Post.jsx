@@ -1,17 +1,15 @@
-import React from 'react';
+import React from 'react'
+import Avatar from './Avatar/Avatar';
 
-const Post = (props) => {
+function Post() {
    return (
-      <div className="main">
-         <div className="container">
-            <div className="content">
-
-               <div>
-                  <img src="./../cat.png" alt="empty" />   Avatar + description
-              </div>
-
-            </div>
-         </div>
+      <div>
+         <div className="item">
+            ++++++++++++++++++++++++++++++
+            <h3>Post N</h3>
+            Avatar
+            post
+</div>
       </div>
    )
 }
