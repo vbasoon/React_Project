@@ -8,9 +8,11 @@ function Post() {
          <div className={style.item}>
             ++++++++++++++++++++++++++++++
             <h3>Post N</h3>
-            <Avatar />
-            post
-</div>
+            <div className={style.image_box}>
+               <img className={style.img} src="./cat.png" alt="cat" /><span> post</span>
+            </div>
+
+         </div>
       </div>
    )
 }
