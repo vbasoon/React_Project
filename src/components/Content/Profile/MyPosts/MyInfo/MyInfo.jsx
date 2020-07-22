@@ -8,17 +8,17 @@ const MyInfo = () => {
       <div>
          <div className="avatar">
             <div className={style.row}>
-               <div className={style.image_box}>
+               {/* <div className={style.image_box}>
                   <img src="./cat.png" alt="cat" />
-               </div>
+               </div> */}
                <Avatar />
                <Info />
-               <div className={style.info_box}>
+               {/* <div className={style.info_box}>
                   <p>Date of Birth: </p>
                   <p>City: </p>
                   <p>Education: </p>
                   <p>WEB Site</p>
-               </div>
+               </div> */}
             </div>
          </div>
       </div>
