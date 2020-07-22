@@ -3,5 +3,10 @@
    width: 100 %;
 }
 
+textarea {
+   display:block;
+width:400px;
+height:200px;
+}
 
 
