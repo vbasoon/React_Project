@@ -1,16 +1,13 @@
 import React from 'react'
-import Post from './Post'
+import style from './PostList.module.css'
+import Post from '../Post/Post'
+
 
 const PostList = () => {
    return (
       <div>
-         <div className="PostList">
-
-
+         <div className={style.postList}>
             <Post />
-            <Post />
-            <Post />
-
          </div>
       </div>
    )

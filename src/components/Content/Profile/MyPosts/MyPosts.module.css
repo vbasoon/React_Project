@@ -1,0 +1,15 @@
+.row {
+   display: flex;
+   width: 100 %;
+   color: black;
+}
+
+.image_box img {
+   width: 120px;
+   height: 100px;
+   margin: 10px;
+}
+
+.info_box {
+   padding-left: 20px;
+}

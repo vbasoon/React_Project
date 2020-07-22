@@ -1,8 +1,8 @@
 import React from 'react';
-import './Profile.css'
-import PostList from '../PostList';
-import MyPost from './MyPosts/Post/MyPost';
-import Avatar from '../Avatar/Avatar';
+import style from './Profile.module.css'
+import PostList from './MyPosts/PostList/PostList.jsx';
+import MyPost from './MyPosts/MyPosts.jsx';
+import MyInfo from './MyPosts/MyInfo/MyInfo.jsx';
 
 const Profile = () => {
    return (
@@ -15,13 +15,14 @@ const Profile = () => {
                </div>
                ==========================================================
                <div className="myProfile">
-                  <Avatar />
+                  <MyInfo />
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                   <MyPost />
                   ===========================================
                   <PostList />
                   ===============================================
                </div>
+               <button>Go Marsel!</button>
             </div>
          </div>
       </div>

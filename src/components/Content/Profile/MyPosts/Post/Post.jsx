@@ -1,5 +1,6 @@
 import React from 'react'
-import Avatar from './Avatar/Avatar';
+import style from './Post.module.css'
+import Avatar from '../MyInfo/Avatar/Avatar';
 
 function Post() {
    return (
@@ -7,7 +8,7 @@ function Post() {
          <div className="item">
             ++++++++++++++++++++++++++++++
             <h3>Post N</h3>
-            Avatar
+            <Avatar />
             post
 </div>
       </div>
