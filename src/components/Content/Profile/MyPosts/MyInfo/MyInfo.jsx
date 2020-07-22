@@ -1,7 +1,9 @@
 import React from 'react'
 import style from './MyInfo.module.css'
+import Avatar from './Avatar/Avatar'
+import Info from './Info/Info'
 
-const Avatar = () => {
+const MyInfo = () => {
    return (
       <div>
          <div className="avatar">
@@ -9,6 +11,8 @@ const Avatar = () => {
                <div className={style.image_box}>
                   <img src="./cat.png" alt="cat" />
                </div>
+               <Avatar />
+               <Info />
                <div className={style.info_box}>
                   <p>Date of Birth: </p>
                   <p>City: </p>
@@ -21,4 +25,4 @@ const Avatar = () => {
    )
 }
 
-export default Avatar
+export default MyInfo
