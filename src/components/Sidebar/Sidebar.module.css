@@ -2,10 +2,10 @@ aside {
    grid-area: sidebar;
    background-color: #46f1467e;
    color: red;
-   /* width: 30%;
-   height: 92vh;
-   float: left; */
-   
+  }
+
+  .itemMenu {
+   color: white;
  }
 
  .active {

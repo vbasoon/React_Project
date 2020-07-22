@@ -8,6 +8,9 @@ const PostList = () => {
       <div>
          <div className={style.postList}>
             <Post />
+            <Post />
+            <Post />
+            <Post />
          </div>
       </div>
    )

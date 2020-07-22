@@ -11,7 +11,7 @@ const MyPosts = () => {
             <input className="inputPost" type="text" placeholder="Input text here">
 
             </input><br />
-            <button class="style.black">Send Message</button>
+            <button class={style.btn_red}>Send Message</button>
          </div>
       </div>
    )

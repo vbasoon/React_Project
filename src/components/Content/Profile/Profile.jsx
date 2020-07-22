@@ -6,7 +6,7 @@ import MyInfo from './MyPosts/MyInfo/MyInfo.jsx';
 
 const Profile = () => {
    return (
-      <div className="main">
+      <div className={style.main}>
          <div className="container">
             <div className="content">
                ================ Hero Scrreen ===========================
@@ -22,7 +22,7 @@ const Profile = () => {
                   <PostList />
                   ===============================================
                </div>
-               <button>Go Marsel!</button>
+               <button>Add Your File!</button>
             </div>
          </div>
       </div>
