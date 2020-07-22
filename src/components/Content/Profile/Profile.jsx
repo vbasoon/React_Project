@@ -16,6 +16,7 @@ const Profile = () => {
                </div>
                ==========================================================
                <div className="myProfile">
+                  <h1 className="title">My Profile</h1>
                   <MyInfo />
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                   <MyPost />
