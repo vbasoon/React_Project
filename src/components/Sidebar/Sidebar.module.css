@@ -4,7 +4,7 @@ aside {
    color: red;
   }
 
-  .itemMenu {
+  .item {
    color: white;
  }
 
@@ -15,4 +15,8 @@ aside {
  .disabled {
     color: lightgrey;
     text-decoration: underline;
+ }
+
+ a {
+    color: white;
  }

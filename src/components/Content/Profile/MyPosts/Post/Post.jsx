@@ -5,7 +5,7 @@ import Avatar from '../MyInfo/Avatar/Avatar';
 function Post() {
    return (
       <div>
-         <div className="item">
+         <div className={style.item}>
             ++++++++++++++++++++++++++++++
             <h3>Post N</h3>
             <Avatar />

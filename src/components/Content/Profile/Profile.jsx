@@ -1,4 +1,5 @@
 import React from 'react';
+import './Profile.css'
 import style from './Profile.module.css'
 import PostList from './MyPosts/PostList/PostList.jsx';
 import MyPost from './MyPosts/MyPosts.jsx';
@@ -6,7 +7,7 @@ import MyInfo from './MyPosts/MyInfo/MyInfo.jsx';
 
 const Profile = () => {
    return (
-      <div className={style.main}>
+      <div className="main">
          <div className="container">
             <div className="content">
                ================ Hero Scrreen ===========================

@@ -1,22 +1,22 @@
 import React from 'react';
-import s from './Sidebar.module.css'
-
+import style from './Sidebar.module.css'
+import './Sidebar.css'
 const Sidebar = () => {
    return (
       <aside className="sidebar">Sidebar
          <nav>
             <div className="container">
                <ul className="nav-menu">
-                  <li className={s.itemMenu}><a href="" className={s.active}>Profile</a></li>
-                  <li className={s.itemMenu}><a href="">Message</a></li>
-                  <li className={s.itemMenu}><a href="">News</a></li>
-                  <li className={s.itemMenu}><a href="" className={s.disabled}> Music</a></li>
+                  <li className={style.item}><a href="" className="active">Profile</a></li>
+                  <li className={style.item}><a href="">Message</a></li>
+                  <li className={style.item}><a href="">News</a></li>
+                  <li className={style.item}><a href="" className="disabled"> Music</a></li>
                   <hr />
-                  <li className={s.itemMenu}><a href="">Settings</a></li>
+                  <li className={style.item}><a href="">Settings</a></li>
                </ul>
             </div>
-         </nav>
-      </aside>
+         </nav >
+      </aside >
    )
 }
 export default Sidebar

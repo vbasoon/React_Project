@@ -6,7 +6,7 @@ import Post from '../Post/Post'
 const PostList = () => {
    return (
       <div>
-         <div className={style.postList}>
+         <div className="postList">
             <Post />
             <Post />
             <Post />

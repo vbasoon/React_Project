@@ -11,7 +11,8 @@ const MyPosts = () => {
             <input className="inputPost" type="text" placeholder="Input text here">
 
             </input><br />
-            <button class={style.btn_red}>Send Message</button>
+            <button className={style.btn_red}>Send Message</button>
+            <a href="#">More</a>
          </div>
       </div>
    )
