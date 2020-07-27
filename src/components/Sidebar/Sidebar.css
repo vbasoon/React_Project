@@ -1,12 +1,8 @@
-.active {
-   color: green;
-}
-
-.disabled {
-   color: lightgrey;
-   text-decoration: underline;
-}
 
 .item {
    color: white;
+}
+
+a {
+   text-decoration: none;
 }

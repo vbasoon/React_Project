@@ -2,13 +2,19 @@ aside {
    grid-area: sidebar;
    background-color: #46f1467e;
    color: red;
+   padding: 20px;
+   
   }
 
-  .item {
+  li {
+list-style-type: none;
+  }
+
+ .item a {
    color: white;
  }
 
- .active {
+ .item a.activeLink {
     color: green;
  }
 
@@ -17,6 +23,4 @@ aside {
     text-decoration: underline;
  }
 
- a {
-    color: white;
- }
+ 
