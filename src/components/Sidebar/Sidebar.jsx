@@ -7,8 +7,8 @@ const Sidebar = () => {
          <nav>
             <div className="container">
                <ul className="nav-menu">
-                  <li className={style.item}><a href="" className="active">Profile</a></li>
-                  <li className={style.item}><a href="">Message</a></li>
+                  <li className={style.item}><a href="/profile" className="active">Profile</a></li>
+                  <li className={style.item}><a href="/messages">Message</a></li>
                   <li className={style.item}><a href="">News</a></li>
                   <li className={style.item}><a href="" className="disabled"> Music</a></li>
                   <hr />
