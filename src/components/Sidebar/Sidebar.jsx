@@ -9,10 +9,10 @@ const Sidebar = () => {
                <ul className="nav-menu">
                   <li className={style.item}><a href="/profile" className="active">Profile</a></li>
                   <li className={style.item}><a href="/messages">Message</a></li>
-                  <li className={style.item}><a href="">News</a></li>
-                  <li className={style.item}><a href="" className="disabled"> Music</a></li>
+                  <li className={style.item}><a href="/news">News</a></li>
+                  <li className={style.item}><a href="/music" className="disabled"> Music</a></li>
                   <hr />
-                  <li className={style.item}><a href="">Settings</a></li>
+                  <li className={style.item}><a href="/settings">Settings</a></li>
                </ul>
             </div>
          </nav >
