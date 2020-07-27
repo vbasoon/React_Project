@@ -20,6 +20,16 @@ const Message = (props) => {
 }
 
 const Dialogs = (props) => {
+
+   let dialogsData = [
+      { id: 1, name: "Dima" },
+      { id: 2, name: "Lena" },
+      { id: 3, name: "Sveta" },
+      { id: 4, name: "Roma" },
+      { id: 5, name: "Nataha" },
+      { id: 6, name: "Sasha" }
+   ]
+
    return (
       <div className={style.dialogs}>
          <div className={style.dialogsItem}>
@@ -28,7 +38,7 @@ const Dialogs = (props) => {
             <DialogItem name="Sveta" id="3" />
             <DialogItem name="Roma" id="4" />
             <DialogItem name="Nataha" id="5" />
-            <DialogItem name="Sashata" id="6" />
+            <DialogItem name="Sasha" id="6" />
 
             {/* <div className={style.dialog}>
                <NavLink to="/messages/{props.N}">Lena</NavLink>

@@ -3,9 +3,8 @@ import style from './MyPosts.module.css';
 import './MyPosts.css';
 const MyPosts = () => {
    return (
-      <div className="myPost">
+      <div className={style.myPost}>
          <h1 className={style.title}>My Posts</h1>
-         <h1 className="title">My Posts</h1>
          <div className="postForm">
             <textarea></textarea>
             <br />
