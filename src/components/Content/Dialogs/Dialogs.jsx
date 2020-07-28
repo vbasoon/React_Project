@@ -21,7 +21,9 @@ const Message = (props) => {
 
 const Dialogs = (props) => {
 
-   let userData = [
+   // Данні
+
+   let users = [
       { id: 1, name: "Dima" },
       { id: 2, name: "Lena" },
       { id: 3, name: "Sveta" },
@@ -30,22 +32,35 @@ const Dialogs = (props) => {
       { id: 6, name: "Sasha" }
    ]
 
-   let messagesData = [
+   let messages = [
       { id: 1, message: "Hi!" },
       { id: 2, message: "How are u doing?" },
       { id: 3, message: "Thanx" },
-
    ]
+
+   //Перетворення (мапінґ)
+
+   let dialogElements = users
+      .map(d => <DialogItem name={d.name} id={d.id} />);
+
+
+   let messageElements = messages
+      .map(m => <Message message={m.message} />);
+
+   // Відображення (рендерінґ)
 
    return (
       <div className={style.dialogs}>
          <div className={style.dialogsItem}>
-            <DialogItem name={userData[0].name} id={userData[0].id} />
+            {
+               dialogElements
+            }
+            {/* <DialogItem name={users[0].name} id={users[0].id} />
             <DialogItem name="Lena" id="2" />
             <DialogItem name="Sveta" id="3" />
             <DialogItem name="Roma" id="4" />
             <DialogItem name="Nataha" id="5" />
-            <DialogItem name="Sasha" id="6" />
+            <DialogItem name="Sasha" id="6" /> */}
 
             {/* <div className={style.dialog}>
                <NavLink to="/messages/{props.N}">Lena</NavLink>
@@ -63,10 +78,16 @@ const Dialogs = (props) => {
                <NavLink to="/messages/6">Sasha</NavLink>
             </div> */}
          </div>
+
          <div className={style.messages}>
-            <Message message={messagesData[0].message} />
-            <Message message={messagesData[1].message} />
-            <Message message={messagesData[2].message} />
+
+            {
+               messageElements
+            }
+
+            {/* <Message message={messages[0].message} />
+            <Message message={messages[1].message} />
+            <Message message={messages[2].message} /> */}
          </div>
       </div>
    )
