@@ -55,39 +55,11 @@ const Dialogs = (props) => {
             {
                dialogElements
             }
-            {/* <DialogItem name={users[0].name} id={users[0].id} />
-            <DialogItem name="Lena" id="2" />
-            <DialogItem name="Sveta" id="3" />
-            <DialogItem name="Roma" id="4" />
-            <DialogItem name="Nataha" id="5" />
-            <DialogItem name="Sasha" id="6" /> */}
-
-            {/* <div className={style.dialog}>
-               <NavLink to="/messages/{props.N}">Lena</NavLink>
-            </div>
-            <div className={style.dialog}>
-               <NavLink to="/messages/3">Sveta</NavLink>
-            </div>
-            <div className={style.dialog}>
-               <NavLink to="/messages/4" >Roma</NavLink>
-            </div>
-            <div className={style.dialog}>
-               <NavLink to="/messages/5" >Nataha</NavLink>
-            </div>
-            <div className={style.dialog}>
-               <NavLink to="/messages/6">Sasha</NavLink>
-            </div> */}
          </div>
-
          <div className={style.messages}>
-
             {
                messageElements
             }
-
-            {/* <Message message={messages[0].message} />
-            <Message message={messages[1].message} />
-            <Message message={messages[2].message} /> */}
          </div>
       </div>
    )
