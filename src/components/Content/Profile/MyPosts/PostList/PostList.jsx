@@ -16,10 +16,10 @@ const PostList = (props) => {
    return (
       <div>
          <div className="postList">
-            <Post p="Hello!" N="1" like="4" dislike="0" />
-            <Post p="Hi!" N="2" like="4" dislike="0" />
-            <Post p="How are u?" N="3" like="4" dislike="0" />
-            <Post p="Здоровенькі були!" N="4" like="4" dislike="0" />
+            <Post message={PostsData[0].message} N={PostsData[0].id} like={PostsData[0].like} dislike={PostsData[0].dislike} />
+            <Post message={PostsData[1].message} N={PostsData[1].id} like={PostsData[1].like} dislike={PostsData[1].dislike} />
+            <Post message={PostsData[2].message} N={PostsData[2].id} like={PostsData[2].like} dislike={PostsData[2].dislike} />
+            <Post message={PostsData[3].message} N={PostsData[3].id} like={PostsData[3].like} dislike={PostsData[3].dislike} />
          </div>
       </div>
    )

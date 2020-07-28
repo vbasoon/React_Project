@@ -11,7 +11,9 @@ const Post = (props) => {
             <h3>Post {props.N}</h3>
             <div className={style.image_box}>
                <img className={style.img} src="./cat.png" alt="cat" /><span>{props.p}</span>
+               <span className={style.text}>{props.message}</span>
             </div>
+
             <span><i className="fa fa-thumbs-up like" ></i>{props.like}</span><span><i className="fa fa-thumbs-down dislike">{props.dislike}</i></span>
          </div>
       </div>
