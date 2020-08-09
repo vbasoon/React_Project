@@ -13,9 +13,24 @@ let posts = [
   { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
 ]
 
+let users = [
+  { id: 1, name: "Dima" },
+  { id: 2, name: "Lena" },
+  { id: 3, name: "Sveta" },
+  { id: 4, name: "Roma" },
+  { id: 5, name: "Nataha" },
+  { id: 6, name: "Sasha" }
+]
+
+let messages = [
+  { id: 1, message: "Hi!" },
+  { id: 2, message: "How are u doing?" },
+  { id: 3, message: "Thanx" },
+]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts} />
+    <App posts={posts} users={users} messages={messages} />
   </React.StrictMode>,
   document.getElementById('root')
 );
