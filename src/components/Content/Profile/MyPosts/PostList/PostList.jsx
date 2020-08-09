@@ -14,7 +14,7 @@ const PostList = (props) => {
       { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
    ]
 
-   let postElements = posts
+   let postElements = props.posts
       .map(p => <Post message={p.message} N={p.id} like={p.like} dislike={p.dislike} />);
 
    return (

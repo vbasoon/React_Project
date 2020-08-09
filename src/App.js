@@ -9,7 +9,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="wrapper">
@@ -17,13 +17,14 @@ const App = () => {
         <Sidebar />
         <div className="main">
           <div className="content">
-            <Route path="/profile" component={Profile} />
-            <Route path="/messages" component={Dialogs} />
-            <Route path="/news" component={Profile} />
-            <Route path="/music" component={Profile} />
-            <Route path="/settings" component={Profile} />
+            <Route path="/profile" render={() => <Profile posts={props.posts} />} />
+            <Route path="/messages" render={() => <Dialogs dialogs={props.users} messages={props.messages} />} />
+            <Route path="/news" render={() => <Profile />} />
+            <Route path="/music" render={() => <Profile />} />
+            <Route path="/settings" render={() => <Profile />} />
           </div>
         </div>
+
         <Footer />
       </div>
     </BrowserRouter>
