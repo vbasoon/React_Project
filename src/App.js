@@ -7,8 +7,6 @@ import Footer from './components/Footer/Footer.jsx';
 import Dialogs from './components/Content/Dialogs/Dialogs';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-
-
 const App = (props) => {
   return (
     <BrowserRouter>
@@ -17,11 +15,13 @@ const App = (props) => {
         <Sidebar />
         <div className="main">
           <div className="content">
-            <Route path="/profile" render={() => <Profile posts={props.posts} />} />
-            <Route path="/messages" render={() => <Dialogs users={props.users} messages={props.messages} />} />
-            <Route path="/news" render={() => <Profile />} />
-            <Route path="/music" render={() => <Profile />} />
-            <Route path="/settings" render={() => <Profile />} />
+            <Route path="/profile"
+              render={() => <Profile state={props.state.postPages} />} />
+            <Route path="/messages"
+              render={() => <Dialogs state={props.state.dialogPages} />} />
+            <Route path="/news" />
+            <Route path="/music" />
+            <Route path="/settings" />
           </div>
         </div>
 
@@ -32,3 +32,6 @@ const App = (props) => {
 }
 
 export default App;
+
+
+// messages={props.state.dialogPages.messages} />} />

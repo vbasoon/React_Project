@@ -6,6 +6,7 @@ import MyPost from './MyPosts/MyPosts.jsx';
 import MyInfo from './MyPosts/MyInfo/MyInfo.jsx';
 
 const Profile = (props) => {
+
    return (
 
       <div className="container">
@@ -22,7 +23,7 @@ const Profile = (props) => {
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                   <MyPost />
                   ===========================================
-                  <PostList posts={props.posts} />
+                  <PostList posts={props.state.posts} />
                   ===============================================
                </div>
             <button>Add Your File!</button>

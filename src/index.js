@@ -3,34 +3,44 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import state from './redux/state.js'
 
-let posts = [
-  { id: 1, message: "Hello!", like: 4, dislike: 0 },
-  { id: 2, message: "Hi!", like: 4, dislike: 0 },
-  { id: 3, message: "How are u?!", like: 3, dislike: 0 },
-  { id: 4, message: "Здоровенькі були!!", like: 42, dislike: 0 },
-  { id: 5, message: "How are u?!", like: 3, dislike: 0 },
-  { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
-]
+// let posts = [
+//   { id: 1, message: "Hello!", like: 4, dislike: 0 },
+//   { id: 2, message: "Hi!", like: 4, dislike: 0 },
+//   { id: 3, message: "How are u?!", like: 3, dislike: 0 },
+//   { id: 4, message: "Здоровенькі були!!", like: 42, dislike: 0 },
+//   { id: 5, message: "How are u?!", like: 3, dislike: 0 },
+//   { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
+// ]
 
-let users = [
-  { id: 1, name: "Dima" },
-  { id: 2, name: "Lena" },
-  { id: 3, name: "Sveta" },
-  { id: 4, name: "Roma" },
-  { id: 5, name: "Nataha" },
-  { id: 6, name: "Sasha" }
-]
+// let users = [
+//   { id: 1, name: "Dima" },
+//   { id: 2, name: "Lena" },
+//   { id: 3, name: "Sveta" },
+//   { id: 4, name: "Roma" },
+//   { id: 5, name: "Nataha" },
+//   { id: 6, name: "Sasha" }
+// ]
 
-let messages = [
-  { id: 1, message: "Hi!" },
-  { id: 2, message: "How are u doing?" },
-  { id: 3, message: "Thanx" },
-]
+// let messages = [
+//   { id: 1, message: "Hi!" },
+//   { id: 2, message: "How are u doing?" },
+//   { id: 3, message: "Thanx" },
+// ]
+
+// let posts = [
+//    { id: 1, message: "Hello!", like: 4, dislike: 0 },
+//    { id: 2, message: "Hi!", like: 4, dislike: 0 },
+//    { id: 3, message: "How are u?!", like: 3, dislike: 0 },
+//    { id: 4, message: "Здоровенькі були!!", like: 42, dislike: 0 },
+//    { id: 5, message: "How are u?!", like: 3, dislike: 0 },
+//    { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
+// ]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts} users={users} messages={messages} />
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );

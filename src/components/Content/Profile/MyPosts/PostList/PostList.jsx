@@ -5,14 +5,9 @@ import Post from '../Post/Post'
 
 const PostList = (props) => {
 
-   let posts = [
-      { id: 1, message: "Hello!", like: 4, dislike: 0 },
-      { id: 2, message: "Hi!", like: 4, dislike: 0 },
-      { id: 3, message: "How are u?!", like: 3, dislike: 0 },
-      { id: 4, message: "Здоровенькі були!!", like: 42, dislike: 0 },
-      { id: 5, message: "How are u?!", like: 3, dislike: 0 },
-      { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
-   ]
+
+
+   debugger
 
    let postElements = props.posts
       .map(p => <Post message={p.message} N={p.id} like={p.like} dislike={p.dislike} />);

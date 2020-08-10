@@ -24,11 +24,13 @@ const Dialogs = (props) => {
 
    //Перетворення (мапінґ)
 
-   let dialogElements = props.users
+
+
+   let dialogElements = props.state.users
       .map(d => <DialogItem name={d.name} id={d.id} />);
 
 
-   let messageElements = props.messages
+   let messageElements = props.state.messages
       .map(m => <Message message={m.message} />);
 
    // Відображення (рендерінґ)
