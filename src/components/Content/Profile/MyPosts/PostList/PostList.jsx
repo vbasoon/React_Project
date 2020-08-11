@@ -6,9 +6,6 @@ import Post from '../Post/Post'
 const PostList = (props) => {
 
 
-
-   debugger
-
    let postElements = props.posts
       .map(p => <Post message={p.message} N={p.id} like={p.like} dislike={p.dislike} />);
 

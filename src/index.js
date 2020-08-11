@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state from './redux/state.js'
+import state from './redux/state.js';
+import { addPost } from './redux/state.js';
+import { BrowserRouter } from 'react-router-dom';
 
 // let posts = [
 //   { id: 1, message: "Hello!", like: 4, dislike: 0 },
@@ -38,9 +40,13 @@ import state from './redux/state.js'
 //    { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
 // ]
 
+//addPost('BVM corp lets started')
+
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} />
+    <BrowserRouter>
+      <App state={state} addPost={addPost} />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

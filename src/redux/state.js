@@ -29,10 +29,18 @@ let state = {
       ]
 
 
-   }
-
-
-
+   },
+   sidebar: {}
 }
 
-export default state
+export let addPost = (postMessage) => {
+   let newPost = {
+      id: 5,
+      message: postMessage,
+      like: 0
+   };
+
+   state.postPages.posts.push(newPost)
+}
+
+export default state 
