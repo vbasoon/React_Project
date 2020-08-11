@@ -23,7 +23,7 @@ const Profile = (props) => {
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                   <MyPost addPost={props.addPost} />
                   ===========================================
-                  <PostList posts={props.state.posts} addPost={props.addPost} />
+                  <PostList posts={props.state.posts} />
                   ===============================================
                </div>
             <button>Add Your File!</button>

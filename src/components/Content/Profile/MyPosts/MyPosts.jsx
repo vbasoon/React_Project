@@ -17,7 +17,7 @@ const MyPosts = (props) => {
          <div className="postForm">
             <textarea ref={newPostElement}></textarea>
             <br />
-            <button onClick={addPost} className={style.btn_red}>Send Message</button>
+            <button onClick={props.addPost} className={style.btn_red}>Send Message</button>
             <a href="#">More</a>
          </div>
          <div className="panel">
