@@ -7,13 +7,13 @@ const MyPosts = (props) => {
 
    let addPost = () => {
       let text = newPostElement.current.value;
-      props.addPost(text)
-      newPostElement.current.value = '';
+      props.addPost(text);
+      props.updateNewPostText(''); // Очищення text-area після виклику події  
    }
 
    let onPostChange = () => {
       let text = newPostElement.current.value;
-      console.log(text)
+      props.updateNewPostText(text);
    }
 
    return (

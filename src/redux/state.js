@@ -11,7 +11,7 @@ let state = {
          { id: 5, message: "How are u?!", like: 3, dislike: 0 },
          { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
       ],
-      newPostText: 'BVM'
+      newPostText: ''
    }
    ,
    dialogPages: {
@@ -45,6 +45,11 @@ export let addPost = (postMessage) => {
    };
 
    state.postPages.posts.push(newPost)
+   rerenderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+   state.postPages.newPostText = newText
    rerenderEntireTree(state);
 }
 
