@@ -36,20 +36,23 @@ let state = {
    sidebar: {}
 }
 
-export let addPost = (postMessage) => {
+window.state = state
+
+export let addPost = () => {
 
    let newPost = {
       id: 5,
-      message: postMessage,
+      message: state.postPages.newPostText, //запит даних з state
       like: 0
    };
 
-   state.postPages.posts.push(newPost)
+   state.postPages.posts.push(newPost);
+   state.postPages.newPostText = ''; // Онулення textarea пысля ведення даних
    rerenderEntireTree(state);
 }
 
 export let updateNewPostText = (newText) => {
-   state.postPages.newPostText = newText
+   state.postPages.newPostText = newText;
    rerenderEntireTree(state);
 }
 

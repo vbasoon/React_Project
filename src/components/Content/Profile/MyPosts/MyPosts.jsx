@@ -6,9 +6,7 @@ const MyPosts = (props) => {
    let newPostElement = React.createRef();
 
    let addPost = () => {
-      let text = newPostElement.current.value;
-      props.addPost(text);
-      props.updateNewPostText(''); // Очищення text-area після виклику події  
+      props.addPost();
    }
 
    let onPostChange = () => {
