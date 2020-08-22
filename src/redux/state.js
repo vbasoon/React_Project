@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from '../rerender';
+
 let state = {
 
    postPages: {
@@ -8,7 +10,8 @@ let state = {
          { id: 4, message: "Здоровенькі були!!", like: 42, dislike: 0 },
          { id: 5, message: "How are u?!", like: 3, dislike: 0 },
          { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
-      ]
+      ],
+      newPostText: 'BVM'
    }
    ,
    dialogPages: {
@@ -34,6 +37,7 @@ let state = {
 }
 
 export let addPost = (postMessage) => {
+
    let newPost = {
       id: 5,
       message: postMessage,
@@ -41,6 +45,7 @@ export let addPost = (postMessage) => {
    };
 
    state.postPages.posts.push(newPost)
+   rerenderEntireTree(state);
 }
 
 export default state 

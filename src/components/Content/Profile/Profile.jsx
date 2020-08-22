@@ -6,7 +6,7 @@ import MyPost from './MyPosts/MyPosts.jsx';
 import MyInfo from './MyPosts/MyInfo/MyInfo.jsx';
 
 const Profile = (props) => {
-   debugger
+
    return (
 
       <div className="container">
@@ -21,7 +21,7 @@ const Profile = (props) => {
                <h1 className="title">My Profile</h1>
                <MyInfo />
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                  <MyPost addPost={props.addPost} />
+                  <MyPost newPostText={props.state.newPostText} addPost={props.addPost} />
                   ===========================================
                   <PostList posts={props.state.posts} />
                   ===============================================
