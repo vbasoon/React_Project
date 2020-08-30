@@ -21,7 +21,7 @@ const Profile = (props) => {
                <h1 className="title">My Profile</h1>
                <MyInfo />
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                  <MyPost newPostText={props.state.newPostText} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />
+                  <MyPost newPostText={props.state.newPostText} dispatch={props.dispatch} />
                   ===========================================
                   <PostList posts={props.state.posts} />
                   ===============================================
