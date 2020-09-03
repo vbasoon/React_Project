@@ -2,16 +2,20 @@ const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const SEND_MESSAGE = 'SEND_MESSAGE'
 
 const dialogReducer = (state, action) => {
-
-   if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-      this._state.dialogPages.newMessageText = action.newMessage;
-
-   } else if (action.type === SEND_MESSAGE) {
-      let newMessage = this._state.dialogPages.newMessageText;
-      this._state.dialogPages.newMessageText = '';
-      this._state.dialogPages.messages.push({ id: 6, message: newMessage });
-
+   switch (action.type) {
+      case UPDATE_NEW_MESSAGE_TEXT:
+         state.newMessageText = action.newMessage;
+         return state;
+      case SEND_MESSAGE:
+         let newMessage = state.newMessageText;
+         state.newMessageText = '';
+         state.messages.push({ id: 6, message: newMessage });
+         return state;
+      default:
+         return state;
    }
 
-   return state;
+
 }
+
+export default dialogReducer; 

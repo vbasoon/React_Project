@@ -1,6 +1,6 @@
-import postReducer from './postReducer.jsx'
-import dialogReducer from './dialogReducer.jsx';
-import sidebarReducer from './sidebarReducer.jsx'
+import postReducer from './postReducer'
+import dialogReducer from './dialogReducer';
+import sidebarReducer from './sidebarReducer'
 
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
@@ -8,6 +8,7 @@ const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const SEND_MESSAGE = 'SEND_MESSAGE'
 
 let store = {
+
    _state: {
 
       postPages: {
@@ -20,7 +21,8 @@ let store = {
             { id: 6, message: "Здоровенькі були!!", like: 42, dislike: 0 }
          ],
          newPostText: ''
-      },
+      }
+      ,
       dialogPages: {
 
          users: [
@@ -48,7 +50,6 @@ let store = {
       console.log('State was changed');
    },
    getState() {
-
       return this._state
    },
 
@@ -71,14 +72,35 @@ let store = {
       this._callSubscriber = observer;
    },
    dispatch(action) {
-
+      debugger
 
       this._state.postPages = postReducer(this._state.postPages, action);
       this._state.dialogPages = dialogReducer(this._state.dialogPages, action);
       this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 
-      this._callSubscriber(this._state);
+      // this._callSubscriber(this._state);
 
+      // if (action.type === ADD_POST) {
+      //    let newPost = {
+      //       id: 5,
+      //       message: this._state.postPages.newPostText, //запит даних з state
+      //       like: 0
+      //    };
+      //    this._state.postPages.posts.push(newPost);
+      //    this._state.postPages.newPostText = ''; // Онулення textarea пысля ведення даних
+      //    this._callSubscriber(this._state);
+      // } else if (action.type === UPDATE_NEW_POST_TEXT) {
+      //    this._state.postPages.newPostText = action.newText;
+      //    this._callSubscriber(this._state);
+      // } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+      //    this._state.dialogPages.newMessageText = action.newMessage;
+      //    this._callSubscriber(this._state);
+      // } else if (action.type === SEND_MESSAGE) {
+      //    let newMessage = this._state.dialogPages.newMessageText;
+      //    this._state.dialogPages.newMessageText = '';
+      //    this._state.dialogPages.messages.push({ id: 6, message: newMessage });
+
+      // }
    }
 }
 
