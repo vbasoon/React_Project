@@ -2,11 +2,6 @@ import postReducer from './postReducer.jsx'
 import dialogReducer from './dialogReducer.jsx';
 import sidebarReducer from './sidebarReducer.jsx'
 
-const ADD_POST = 'ADD-POST'
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
-const SEND_MESSAGE = 'SEND_MESSAGE'
-
 let store = {
    _state: {
 
@@ -82,12 +77,8 @@ let store = {
    }
 }
 
-export const addPostActionCreator = () => ({ type: ADD_POST })
-export const updateNewPostTextActionCreator = (text) =>
-   ({ type: UPDATE_NEW_POST_TEXT, newText: text })
-export const updateNewMessageTextActionCreator = (message) =>
-   ({ type: UPDATE_NEW_MESSAGE_TEXT, newMessage: message })
-export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE })
+
+
 
 export default store;
 window.store = store;
