@@ -2,36 +2,33 @@ import React from 'react'
 import style from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
+import { updateNewMessageTextActionCreator, sendMessageActionCreator } from '../../../redux/state'
 
 const Dialogs = (props) => {
 
-   // Данні
 
-   // let users = [
-   //    { id: 1, name: "Dima" },
-   //    { id: 2, name: "Lena" },
-   //    { id: 3, name: "Sveta" },
-   //    { id: 4, name: "Roma" },
-   //    { id: 5, name: "Nataha" },
-   //    { id: 6, name: "Sasha" }
-   // ]
-
-   // let messages = [
-   //    { id: 1, message: "Hi!" },
-   //    { id: 2, message: "How are u doing?" },
-   //    { id: 3, message: "Thanx" },
-   // ]
+   let state = props.store.getState().dialogPages;
 
    //Перетворення (мапінґ)
 
-
-
-   let dialogElements = props.state.users
+   let dialogElements = state.users
       .map(d => <DialogItem name={d.name} id={d.id} />);
 
 
-   let messageElements = props.state.messages
+   let messageElements = state.messages
       .map(m => <Message message={m.message} />);
+
+   let newMessageText = state.newMessageText
+
+
+   let onSendMessageClick = () => {
+      props.store.dispatch(sendMessageActionCreator());
+   }
+
+   let onNewMessageChange = (event) => {
+      let newMessage = event.target.value;
+      props.store.dispatch(updateNewMessageTextActionCreator(newMessage))
+   }
 
    // Відображення (рендерінґ)
 
@@ -43,9 +40,15 @@ const Dialogs = (props) => {
             }
          </div>
          <div className={style.messages}>
-            {
-               messageElements
-            }
+
+            <div>{messageElements}</div>
+            <div>
+               <div><textarea value={newMessageText}
+                  onChange={onNewMessageChange}
+                  placeholder="Введіть сюди текст "></textarea> </div>
+               <div><button onClick={onSendMessageClick}>Send</button></div>
+            </div>
+
          </div>
       </div>
    )
