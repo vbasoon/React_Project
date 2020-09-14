@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { addPost, updateNewPostText } from './redux/state.js';
+import { addPost, updateNewPostText } from './redux/store.js';
 import { BrowserRouter } from 'react-router-dom';
 
 export let rerenderEntireTree = (state) => {
