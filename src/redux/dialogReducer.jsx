@@ -1,10 +1,6 @@
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const SEND_MESSAGE = 'SEND_MESSAGE'
 
-export const updateNewMessageTextActionCreator = (message) =>
-   ({ type: UPDATE_NEW_MESSAGE_TEXT, newMessage: message })
-export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE })
-
 const dialogReducer = (state, action) => {
    switch (action.type) {
       case UPDATE_NEW_MESSAGE_TEXT:
@@ -21,5 +17,9 @@ const dialogReducer = (state, action) => {
 
 
 }
+
+export const updateNewMessageTextActionCreator = (message) =>
+   ({ type: UPDATE_NEW_MESSAGE_TEXT, newMessage: message })
+export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE })
 
 export default dialogReducer; 

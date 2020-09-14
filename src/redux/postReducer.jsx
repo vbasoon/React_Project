@@ -1,9 +1,6 @@
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 
-export const addPostActionCreator = () => ({ type: ADD_POST })
-export const updateNewPostTextActionCreator = (text) =>
-   ({ type: UPDATE_NEW_POST_TEXT, newText: text })
 
 const postReducer = (state, action) => {
    switch (action.type) {
@@ -24,5 +21,9 @@ const postReducer = (state, action) => {
    }
 
 }
+
+export const addPostActionCreator = () => ({ type: ADD_POST })
+export const updateNewPostTextActionCreator = (text) =>
+   ({ type: UPDATE_NEW_POST_TEXT, newText: text })
 
 export default postReducer
