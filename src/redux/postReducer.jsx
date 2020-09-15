@@ -20,7 +20,8 @@ const postReducer = (state = initialState, action) => {
          let newPost = {
             id: 5,
             message: state.newPostText, //запит даних з state
-            like: 0
+            like: 0,
+            dislike: 0
          };
          state.posts.push(newPost);
          state.newPostText = ''; // Онулення textarea пысля ведення даних

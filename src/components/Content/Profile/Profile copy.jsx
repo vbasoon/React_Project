@@ -2,8 +2,9 @@ import React from 'react';
 import './Profile.css'
 import style from './Profile.module.css'
 import PostList from './MyPosts/PostList/PostList.jsx';
-import MyPost from './MyPosts/MyPosts.jsx';
+//import MyPost from './MyPosts/MyPosts.jsx';
 import MyInfo from './MyPosts/MyInfo/MyInfo.jsx';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 const Profile = (props) => {
 
@@ -21,11 +22,12 @@ const Profile = (props) => {
                <h1 className="title">My Profile</h1>
                <MyInfo />
                   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                  <MyPost newPostText={props.postPages.newPostText} dispatch={props.dispatch} />
+                  <MyPostsContainer store={props.store} newPostText={props.state.newPostText} dispatch={props.dispatch} />
                   ===========================================
-                  <PostList posts={props.postPages.posts} />
+                  <PostList posts={props.state.posts} />
                   ===============================================
                </div>
+
             <button>Add Your File!</button>
          </div>
       </div>
