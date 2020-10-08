@@ -1,40 +1,43 @@
-import React from 'react';
-import style from './MyPosts.module.css';
-import './MyPosts.css';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../redux/postReducer'
-
-
+import React from "react";
+import style from "./MyPosts.module.css";
+import "./MyPosts.css";
+import Post from "./Post/Post";
 
 const MyPosts = (props) => {
+  let postElements = props.posts.map((p) => (
+    <Post message={p.message} N={p.id} like={p.like} dislike={p.dislike} />
+  ));
 
-   let newPostElement = React.createRef();
+  let newPostElement = React.createRef();
 
-   let addPost = () => {
+  let onAddPost = () => {
+    props.addPost();
+  };
 
-      props.dispatch(addPostActionCreator());
-   }
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.updateNewPostText(text);
+  };
 
-   let onPostChange = () => {
-      let text = newPostElement.current.value;
-      // let action = { type: 'UPDATE-NEW-POST-TEXT', newText: text };
-      let action = updateNewPostTextActionCreator(text);
-      props.dispatch(action);
-   }
-
-   return (
-      <div className={style.myPost}>
-         <h1 className={style.title}>My Posts</h1>
-         <div className="postForm">
-            <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
-            <br />
-            <button onClick={addPost} className={style.btn_red}>Send Message</button>
-            <a href="#">More</a>
-         </div>
-         <div className="panel">
-
-         </div>
+  return (
+    <div className={style.myPost}>
+      <h1 className={style.title}>My Posts</h1>
+      <div className="postForm">
+        <textarea
+          onChange={onPostChange}
+          ref={newPostElement}
+          value={props.newPostText}
+        />
+        <br />
+        <button onClick={onAddPost} className={style.btn_red}>
+          Send Message
+        </button>
+        <a href="#">More</a>
       </div>
-   )
-}
+      <div className="panel"></div>
+      <div className="postList">{postElements}</div>
+    </div>
+  );
+};
 
-export default MyPosts
+export default MyPosts;
