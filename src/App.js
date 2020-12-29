@@ -16,11 +16,11 @@ const App = (props) => {
         <div className="content">
           <Route
             path="/profile"
-            render={() => <Profile store={props.store} />}
+            render={() => <Profile />}
           />
           <Route
             path="/messages"
-            render={() => <DialogsContainer store={props.store} />}
+            render={() => <DialogsContainer />}
           />
           <Route path="/news" />
           <Route path="/music" />

@@ -20,7 +20,7 @@ const Profile = (props) => {
           <h1 className="title">My Profile</h1>
           <MyInfo />
           +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-          <MyPostsContainer store={props.store} />
+          <MyPostsContainer />
           ===========================================
           {/* <PostList posts={props.postPages.posts} /> */}
           ===============================================

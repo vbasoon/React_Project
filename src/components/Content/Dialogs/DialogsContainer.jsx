@@ -3,28 +3,35 @@ import {
   updateNewMessageTextActionCreator,
   sendMessageActionCreator,
 } from "../../../redux/dialogReducer";
+import StoreContext from "../../../StoreContext";
 import Dialogs from "./Dialogs";
 
-const DialogsContainer = (props) => {
-  let state = props.store.getState().dialogPages;
-
-  let onSendMessageClick = () => {
-    props.store.dispatch(sendMessageActionCreator());
-  };
-
-  let onNewMessageChange = (newMessage) => {
-    props.store.dispatch(updateNewMessageTextActionCreator(newMessage));
-  };
+const DialogsContainer = () => {
 
   // Відображення (рендерінґ)
 
   return (
-    <Dialogs
-      updateNewMessageText={onNewMessageChange}
-      sendMessage={onSendMessageClick}
-      dialogPages={state}
-    />
-  );
-};
+    <StoreContext.Consumer>
+      { store => {
+        let state = store.getState().dialogPages;
+
+        let onSendMessageClick = () => {
+          store.dispatch(sendMessageActionCreator());
+        }
+
+        let onNewMessageChange = (newMessage) => {
+          store.dispatch(updateNewMessageTextActionCreator(newMessage));
+        }
+
+        return < Dialogs
+          updateNewMessageText={onNewMessageChange}
+          sendMessage={onSendMessageClick}
+          dialogPages={state}
+        />
+      }
+      }
+    </StoreContext.Consumer>
+  )
+}
 
 export default DialogsContainer;

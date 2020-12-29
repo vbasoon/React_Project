@@ -6,16 +6,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import { addPost, updateNewPostText, subscribe } from './redux/state.js';
 import { BrowserRouter } from 'react-router-dom';
-import StoreContext from './storeContext';
+import { Provider } from './StoreContext';
 
 let rerenderEntireTree = (state) => {
 
    ReactDOM.render(
       <React.StrictMode>
          <BrowserRouter>
-            <StoreContext.Provider value={store}>
+            <Provider store={store}>
                <App />
-            </StoreContext.Provider>
+            </Provider>
          </BrowserRouter>
       </React.StrictMode >,
       document.getElementById('root')
