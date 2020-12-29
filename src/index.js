@@ -6,9 +6,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import { addPost, updateNewPostText, subscribe } from './redux/state.js';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from './StoreContext';
+import { Provider } from 'react-redux';
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
 
    ReactDOM.render(
       <React.StrictMode>
