@@ -6,18 +6,18 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import { addPost, updateNewPostText, subscribe } from './redux/state.js';
 import { BrowserRouter } from 'react-router-dom';
+import StoreContext from './storeContext';
 
 let rerenderEntireTree = (state) => {
 
    ReactDOM.render(
       <React.StrictMode>
          <BrowserRouter>
-            <App state={store.getState()}
-               dispatch={store.dispatch.bind(store)}
-               store={store}
-            />
+            <StoreContext.Provider value={store}>
+               <App />
+            </StoreContext.Provider>
          </BrowserRouter>
-      </React.StrictMode>,
+      </React.StrictMode >,
       document.getElementById('root')
    );
 
