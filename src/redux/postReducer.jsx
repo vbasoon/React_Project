@@ -16,23 +16,32 @@ let initialState = {
 
 const postReducer = (state = initialState, action) => {
    switch (action.type) {
-      case ADD_POST:
+      case ADD_POST: {
          let newPost = {
             id: 5,
             message: state.newPostText, //запит даних з state
             like: 0,
             dislike: 0
          };
-         state.posts.push(newPost);
-         state.newPostText = ''; // Онулення textarea пысля ведення даних
-         return state;
-      case UPDATE_NEW_POST_TEXT:
-         state.newPostText = action.newText;
-         return state;
+
+         let newState = {
+            ...state,
+            posts: [...state.posts, newPost],
+            newPostText: ''
+         };
+
+         return newState;
+      }
+      case UPDATE_NEW_POST_TEXT: {
+         return {
+            ...state,
+            newPostText: action.newText
+         };
+
+      }
       default:
          return state;
    }
-
 }
 
 export const addPostActionCreator = () => ({ type: ADD_POST })

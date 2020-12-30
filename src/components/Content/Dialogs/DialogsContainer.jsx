@@ -7,17 +7,17 @@ import Dialogs from "./Dialogs";
 import { connect } from "react-redux";
 
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     dialogPages: state.dialogPages
   }
 }
-let mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    updateNewMessageText: () => {
+    sendMessage: () => {
       dispatch(sendMessageActionCreator());
     },
-    sendMessage: (newMessage) => {
+    updateNewMessageText: (newMessage) => {
       dispatch(updateNewMessageTextActionCreator(newMessage));
     }
   }
