@@ -1,6 +1,6 @@
-import postReducer from './postReducer.jsx'
-import dialogReducer from './dialogReducer.jsx';
-import sidebarReducer from './sidebarReducer.jsx'
+import postReducer from './postReducer.js'
+import dialogReducer from './dialogReducer.js';
+import sidebarReducer from './sidebarReducer.js'
 
 let store = {
    _state: {

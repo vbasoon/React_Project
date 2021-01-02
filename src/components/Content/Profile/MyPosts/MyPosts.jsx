@@ -2,6 +2,7 @@ import React from "react";
 import style from "./MyPosts.module.css";
 import "./MyPosts.css";
 import Post from "./Post/Post";
+import { Link } from "react-router-dom";
 
 const MyPosts = (props) => {
   let postElements = props.posts.map((p) => (
@@ -38,7 +39,7 @@ const MyPosts = (props) => {
         <button onClick={onAddPost} className={style.btn_red}>
           Send Message
         </button>
-        <a href="#">More</a>
+        <Link to="#">More</Link>
       </div>
       <div className="panel"></div>
       <div className="postList">{postElements}</div>
