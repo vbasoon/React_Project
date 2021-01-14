@@ -12,6 +12,7 @@ const Sidebar = () => {
                   <li className={style.item}><NavLink to="/messages" activeClassName={style.activeLink}>Message</NavLink></li>
                   <li className={style.item}><NavLink to="/news" activeClassName={style.activeLink}>News</NavLink></li>
                   <li className={style.item}><NavLink to="/music" activeClassName={style.activeLink}> Music</NavLink></li>
+                  <li className={style.item}><NavLink to="/users" activeClassName={style.activeLink}> Find Users</NavLink></li>
                   <hr />
                   <li className={style.item}><NavLink to="/settings" activeClassName={style.activeLink}>Settings</NavLink></li>
                </ul>
