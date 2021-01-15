@@ -1,14 +1,14 @@
-import React from 'react';
+//import React from 'react';
 import Users from './Users';
 import { connect } from 'react-redux';
-import { followActionCreator, unfollowActionCreator, setUsersActionCreator } from '../../../../redux/usersReduser';
+import { followActionCreator, unfollowActionCreator, setUsersActionCreator } from '../../../redux/usersReduser';
 
 let mapStateToProps = (state) => {
    return {
-      users: state.usersPage.users
+      users: state.userPages.users
    }
 }
-let mapDispatchToProps = (state) => {
+let mapDispatchToProps = (dispatch) => {
    return {
       follow: (userId) => {
          dispatch(followActionCreator(userId));
@@ -16,8 +16,8 @@ let mapDispatchToProps = (state) => {
       unfollow: (userId) => {
          dispatch(unfollowActionCreator(userId));
       },
-      setUser: (user) => {
-         dispatch(setUsersActionCreator(user));
+      setUsers: (users) => {
+         dispatch(setUsersActionCreator(users));
       },
    }
 }
