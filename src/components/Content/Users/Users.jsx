@@ -9,7 +9,9 @@ const Users = (props) => {
                <div className="col left">
                   <Avatar />
                   <div className="button">
-                     {u.followed ? <button>Unfollow</button> : <button>Follow</button>}
+                     {u.followed
+                        ? <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
+                        : <button onClick={() => { props.follow(u.id) }}>Follow</button>}
 
                   </div>
 
