@@ -14,7 +14,11 @@ const usersReducer = (state = initialState, action) => {
 
    switch (action.type) {
       case FOLLOW:
-
+         let stateCopy = {
+            ...state,
+            users: [...state.users],
+            users: state.users.map(u => u)
+         }
       case UNFOLLOW:
 
       default:
