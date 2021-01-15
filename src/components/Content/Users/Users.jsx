@@ -2,6 +2,9 @@ import React from 'react';
 import Avatar from '../Profile/MyPosts/MyInfo/Avatar/Avatar';
 
 const Users = (props) => {
+
+   props.setUsers()
+
    return <div>
       {
          props.users.map(u => <div key={u.id}>
@@ -9,7 +12,9 @@ const Users = (props) => {
                <div className="col left">
                   <Avatar />
                   <div className="button">
-                     {u.followed ? <button>Unfollow</button> : <button>Follow</button>}
+                     {u.followed
+                        ? <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
+                        : <button onClick={() => { props.follow(u.id) }}>Follow</button>}
 
                   </div>
 
