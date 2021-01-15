@@ -3,8 +3,6 @@ import Avatar from '../Profile/MyPosts/MyInfo/Avatar/Avatar';
 
 const Users = (props) => {
 
-   props.setUsers()
-
    return <div>
       {
          props.users.map(u => <div key={u.id}>
