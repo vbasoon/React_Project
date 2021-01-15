@@ -1,8 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Users from './Users';
 import { connect } from 'react-redux';
 
+let mapStateToProps = (state) = {}
+let mapDispatchToProps = (state) = {}
 
-export default connect()(Users);
+export default connect(mapStateToProps, mapDispatchToProps)(Users);
 
