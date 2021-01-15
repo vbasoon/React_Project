@@ -1,7 +1,14 @@
 import React from 'react';
 import Avatar from '../Profile/MyPosts/MyInfo/Avatar/Avatar';
+import styles from './Users.module.css';
 
 const Users = (props) => {
+
+   props.setUsers(
+      { id: 1, followed: false, nickName: 'Dmitry', status: 'I am a boss', location: { city: 'Mensk', country: 'Belarus' } },
+      { id: 2, followed: true, nickName: 'Rasputin', status: 'I am a boss too', location: { city: 'Moscow', country: 'Ruzzia' } },
+      { id: 3, followed: false, nickName: 'Pavlo', status: 'I am a boss too', location: { city: 'Kyiv', country: 'Ukraine' } }
+   )
 
    return <div>
       {

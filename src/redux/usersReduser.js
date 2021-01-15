@@ -4,9 +4,9 @@ const SET_USERS = "SET_USERS"
 
 let initialState = {
    users: [
-      { id: 1, followed: false, nickName: 'Dmitry', status: 'I am a boss', location: { city: 'Mensk', country: 'Belarus' } },
-      { id: 2, followed: true, nickName: 'Rasputin', status: 'I am a boss too', location: { city: 'Moscow', country: 'Ruzzia' } },
-      { id: 3, followed: false, nickName: 'Pavlo', status: 'I am a boss too', location: { city: 'Kyiv', country: 'Ukraine' } }
+      // { id: 1, followed: false, nickName: 'Dmitry', status: 'I am a boss', location: { city: 'Mensk', country: 'Belarus' } },
+      // { id: 2, followed: true, nickName: 'Rasputin', status: 'I am a boss too', location: { city: 'Moscow', country: 'Ruzzia' } },
+      // { id: 3, followed: false, nickName: 'Pavlo', status: 'I am a boss too', location: { city: 'Kyiv', country: 'Ukraine' } }
    ]
 }
 
